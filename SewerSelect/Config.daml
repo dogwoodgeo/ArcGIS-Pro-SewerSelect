@@ -1,0 +1,77 @@
+﻿<ArcGIS defaultAssembly="SewerSelect.dll" defaultNamespace="SewerSelect" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{950b1196-d88e-4760-b5da-b3cf7c44acc3}" version="1.0" desktopVersion="2.2.12813">
+    <Name>SewerSelect</Name>
+    <Description>SewerSelect description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>Bradley.Jones</Author>
+    <Company>Acme</Company>
+    <Date>10/3/2018 8:35:55 AM, 2018</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="SewerSelect_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <!--<tab id="SewerSelect_Tab1" caption="New Tab">
+          <group refID="SewerSelect_Group1"/>
+        </tab>-->
+      </tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="SewerSelect_Group1" caption="Select Sewers" appearsOnAddInTab="true">
+          <!-- host controls within groups -->
+          <tool refID="SewerSelect_SewerSelectTool" size="large" />
+          <tool refID="esri_mapping_createSelectionLayerButton" size="large" />
+          <splitButton refID="SewerSelect_MakeLayersButtons" />
+          <tool refID="esri_mapping_clearSelectionButton" size="small" />
+         </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <tool id="SewerSelect_SewerSelectTool" 
+              caption="Select" 
+              className="SewerSelectTool" 
+              loadOnClick="true" 
+              smallImage="Images\Rabbit16.png" 
+              largeImage="Images\Rabbit32.png" 
+          condition="esri_mapping_mapPane">
+          <tooltip heading="Select Sewers">This tool will make Manhole and Sewer Line layers the only selctable layers. Then use a Lasso tool to draw area you want to select sewers from. MANHOLES and SEWER LINES layers must be in the map and named as such.<disabledText /></tooltip>
+        </tool>
+        <button id="SewerSelect_MakeLayersButtons_Items_ManholesLines_button" 
+                caption="Make Sewers Layers" 
+                className="MakeLayersButtons_ManholesLines_button" 
+                loadOnClick="true" 
+                smallImage="Images\T-Rex16.png" 
+                largeImage="Images\T-Rex32.png">
+          <tooltip heading="Split Button 1">ToolTip<disabledText /></tooltip>
+        </button>
+        <button id="SewerSelect_MakeLayersButtons_Items_Manholes_button" 
+                caption="Make Manholes Layer" 
+                className="MakeLayersButtons_Manholes_button" 
+                loadOnClick="true" 
+                smallImage="Images\MarsCat16.png" 
+                largeImage="Images\MarsCat32.png">
+          <tooltip heading="Split Button 2">ToolTip<disabledText /></tooltip>
+        </button>
+        <button id="SewerSelect_MakeLayersButtons_Items_SewerLines_button" 
+                caption="Make Sewer Lines Layer " 
+                className="MakeLayersButtons_SewerLines_button" 
+                loadOnClick="true" 
+                smallImage="Images\BexDog16.png" 
+                largeImage="Images\BexDog32.png">
+          <tooltip heading="Split Button 3">ToolTip<disabledText /></tooltip>
+        </button>
+      </controls>
+      <splitButtons>
+        <splitButton id="SewerSelect_MakeLayersButtons">
+          <button refID="SewerSelect_MakeLayersButtons_Items_ManholesLines_button" />
+          <button refID="SewerSelect_MakeLayersButtons_Items_Manholes_button" />
+          <button refID="SewerSelect_MakeLayersButtons_Items_SewerLines_button" />
+        </splitButton>
+      </splitButtons>
+    </insertModule>
+  </modules>
+</ArcGIS>
