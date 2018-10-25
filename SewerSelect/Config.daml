@@ -24,12 +24,12 @@
         <group id="SewerSelect_Group1" caption="Select Sewers" appearsOnAddInTab="true">
           <!-- host controls within groups -->
           <tool refID="SewerSelect_SewerSelectTool" size="large" />
-          <tool refID="esri_mapping_createSelectionLayerButton" size="large" />
-          <button refID="SewerSelect_MakeSewers" size="large" />
-          <button refID="SewerSelect_MakeManholes" size="large" />
-          <button refID="SewerSelect_MakeSewerLines" size="large" />
-          <tool refID="esri_mapping_clearSelectionButton" size="small" />
+          <!--<tool refID="esri_mapping_createSelectionLayerButton" size="large" />-->
+          <!--<button refID="SewerSelect_MakeSewers" size="large" />-->
+          <!--<button refID="SewerSelect_MakeManholes" size="large" />-->
+          <!--<button refID="SewerSelect_MakeSewerLines" size="large" />-->
           <buttonPalette refID="SewerSelect_MakeLayersButtonPalette" />
+          <tool refID="esri_mapping_clearSelectionButton" size="small" />
         </group>
       </groups>
       <controls>
@@ -37,22 +37,22 @@
         <tool id="SewerSelect_SewerSelectTool" caption="Select" className="SewerSelectTool" loadOnClick="true" smallImage="Images\Rabbit16.png" largeImage="Images\Rabbit32.png" condition="esri_mapping_mapPane">
           <tooltip heading="Select Sewers">This tool will make Manhole and Sewer Line layers the only selctable layers. Then use a Lasso tool to draw area you want to select sewers from. MANHOLES and SEWER LINES layers must be in the map and named as such.<disabledText /></tooltip>
         </tool>
-        <button id="SewerSelect_MakeSewerLines" caption="Sewer Lines Layer From Selection" className="MakeSewerLines" loadOnClick="true" smallImage="Images\MarsCat16.png" largeImage="Images\MarsCat32.png">
+        <!--<button id="SewerSelect_MakeSewerLines" caption="Sewer Lines Layer From Selection" className="MakeSewerLines" loadOnClick="true" smallImage="Images\MarsCat16.png" largeImage="Images\MarsCat32.png">
           <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
-        </button>
-        <button id="SewerSelect_MakeManholes" caption="Manholes Layer From Selection" className="MakeManholes" loadOnClick="true" smallImage="Images\BexDog16.png" largeImage="Images\BexDog32.png">
+        </button>-->
+        <!--<button id="SewerSelect_MakeManholes" caption="Manholes Layer From Selection" className="MakeManholes" loadOnClick="true" smallImage="Images\BexDog16.png" largeImage="Images\BexDog32.png">
           <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
-        </button>
-        <button id="SewerSelect_MakeSewers" caption="Manholes and Lines Layers From Selection" className="MakeSewers" loadOnClick="true" smallImage="Images\T-Rex16.png" largeImage="Images\T-Rex32.png">
+        </button>-->
+     <!--<button id="SewerSelect_MakeSewers" caption="Manholes and Lines Layers From Selection" className="MakeSewers" loadOnClick="true" smallImage="Images\T-Rex16.png" largeImage="Images\T-Rex32.png">
           <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
-        </button>
-        <button id="SewerSelect_MakeLayersButtonPalette_Items_SewersButton" caption="Manholes and Lines Selection" className="MakeLayersButtonPalette_sewersbutton" loadOnClick="true" smallImage="Images\GenericButtonGrey16.png" largeImage="Images\GenericButtonGrey32.png">
+        </button>-->
+        <button id="SewerSelect_MakeLayersButtonPalette_Items_SewersButton" caption="Manholes and Lines Selection Layer" className="MakeLayersButtonPalette_sewersbutton" loadOnClick="true" smallImage="Images\GenericButtonGrey16.png" largeImage="Images\GenericButtonGrey32.png">
           <tooltip heading="Palette Button 1">ToolTip<disabledText /></tooltip>
         </button>
-        <button id="SewerSelect_MakeLayersButtonPalette_Items_ManholesButton" caption="Manhole Selection" className="MakeLayersButtonPalette_manholesbutton" loadOnClick="true" smallImage="Images\GenericButtonGrey16.png" largeImage="Images\GenericButtonGrey32.png">
+        <button id="SewerSelect_MakeLayersButtonPalette_Items_ManholesButton" caption="Manholes Selection Layer" className="MakeLayersButtonPalette_manholesbutton" loadOnClick="true" smallImage="Images\GenericButtonGrey16.png" largeImage="Images\GenericButtonGrey32.png">
           <tooltip heading="Palette Button 2">ToolTip<disabledText /></tooltip>
         </button>
-        <button id="SewerSelect_MakeLayersButtonPalette_Items_LinesButton" caption="Sewer Lines Selection" className="MakeLayersButtonPalette_linesbutton" loadOnClick="true" smallImage="Images\GenericButtonGrey16.png" largeImage="Images\GenericButtonGrey32.png">
+        <button id="SewerSelect_MakeLayersButtonPalette_Items_LinesButton" caption="Sewer Lines Selection Layer" className="MakeLayersButtonPalette_linesbutton" loadOnClick="true" smallImage="Images\GenericButtonGrey16.png" largeImage="Images\GenericButtonGrey32.png">
           <tooltip heading="Palette Button 3">ToolTip<disabledText /></tooltip>
         </button>
       </controls>

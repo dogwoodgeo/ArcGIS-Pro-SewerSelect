@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ArcGIS.Core.CIM;
-using ArcGIS.Core.Data;
-using ArcGIS.Core.Geometry;
-using ArcGIS.Desktop.Catalog;
-using ArcGIS.Desktop.Core;
 using ArcGIS.Desktop.Editing;
-using ArcGIS.Desktop.Extensions;
-using ArcGIS.Desktop.Framework;
 using ArcGIS.Desktop.Framework.Contracts;
 using ArcGIS.Desktop.Framework.Dialogs;
 using ArcGIS.Desktop.Framework.Threading.Tasks;
@@ -206,10 +197,7 @@ namespace SewerSelect
                         CIMSimpleRenderer renderer = selectionLayer.GetRenderer() as CIMSimpleRenderer;
                         renderer.Symbol = lineSymbol.MakeSymbolReference();
                         selectionLayer.SetRenderer(renderer);
-
-
                     }
-
                 }
 
                 else
@@ -218,7 +206,6 @@ namespace SewerSelect
                         "\n\nIf a sewer lines layer is present, make sure the layer is named 'Sewer Lines'. " +
                         "This tool will not work unless the layer is spelled exactly like above.", "Warning");
                 }
-
             });
         }
     }
