@@ -103,9 +103,6 @@
   <ItemGroup>
     <Compile Include="Daml.cs" />
     <Compile Include="MakeLayersButtonPalette.cs" />
-    <Compile Include="MakeManholes.cs" />
-    <Compile Include="MakeSewerLines.cs" />
-    <Compile Include="MakeSewers.cs" />
     <Compile Include="SewerSelectTool.cs" />
     <Compile Include="Module1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
