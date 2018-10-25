@@ -178,7 +178,6 @@ namespace SewerSelect
 
             if (mhOIDList.Count() == 0 || linesOIDList.Count() == 0)
             {
-                MessageBox.Show("Manholes and/or Sewer Lines contain no selected features.", "Warning");
                 return false;
             }
 
@@ -199,7 +198,6 @@ namespace SewerSelect
 
             else
             {
-                MessageBox.Show("There are no manholes selected.", "Warning");
                 return false;
             }
         }
@@ -215,7 +213,6 @@ namespace SewerSelect
 
             else
             {
-                MessageBox.Show("There are no sewer lines selected.", "Warning");
                 return false;
             }
         }
