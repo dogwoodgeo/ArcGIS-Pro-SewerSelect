@@ -34,6 +34,7 @@ namespace SewerSelect
             }
         }
 
+        // Methods to create the selection layer.  
         public static void MakeSewersLayers(Map mapView)
         {
             var mh = mapView.GetLayersAsFlattenedList().OfType<FeatureLayer>().FirstOrDefault(s => s.Name == "Manholes");
@@ -168,13 +169,17 @@ namespace SewerSelect
             }
         }
 
-        public static bool ManholesLinesSelected(FeatureLayer mhLayer, FeatureLayer linesLayer)
+
+        // Methods to check the state/condition for make layers buttons.
+        public static bool SewersSelected()
         {
+            var mapView = MapView.Active.Map;
+            var mhLayer = mapView.GetLayersAsFlattenedList().OfType<FeatureLayer>().FirstOrDefault(s => s.Name == "Manholes");
+            var linesLayer = mapView.GetLayersAsFlattenedList().OfType<FeatureLayer>().FirstOrDefault(s => s.Name == "Sewer Lines");
+            
             //Get the selected features from the map.
             var mhOIDList = mhLayer.GetSelection().GetObjectIDs();
-            var mhOID = mhLayer.GetTable().GetDefinition().GetObjectIDField();
             var linesOIDList = linesLayer.GetSelection().GetObjectIDs();
-            var linesOID = linesLayer.GetTable().GetDefinition().GetObjectIDField();
 
             if (mhOIDList.Count() == 0 || linesOIDList.Count() == 0)
             {
@@ -187,10 +192,12 @@ namespace SewerSelect
             }
         }
 
-        public static bool ManholesSelected(FeatureLayer mhLayer)
+        public static bool ManholesSelected()
         {
+            var mapView = MapView.Active.Map;
+            var mhLayer = mapView.GetLayersAsFlattenedList().OfType<FeatureLayer>().FirstOrDefault(s => s.Name == "Manholes");
+
             var mhOIDList = mhLayer.GetSelection().GetObjectIDs();
-            var linesOID = mhLayer.GetTable().GetDefinition().GetObjectIDField();
             if (mhOIDList.Count > 0)
             {
                 return true;
@@ -202,10 +209,12 @@ namespace SewerSelect
             }
         }
 
-        public static bool LinesSelected(FeatureLayer linesLayer)
+        public static bool LinesSelected()
         {
+            var mapView = MapView.Active.Map;
+            var linesLayer = mapView.GetLayersAsFlattenedList().OfType<FeatureLayer>().FirstOrDefault(s => s.Name == "Sewer Lines");
+
             var linesOIDList = linesLayer.GetSelection().GetObjectIDs();
-            var linesOID = linesLayer.GetTable().GetDefinition().GetObjectIDField();
             if (linesOIDList.Count > 0)
             {
                 return true;
