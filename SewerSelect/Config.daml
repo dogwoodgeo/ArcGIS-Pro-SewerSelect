@@ -29,6 +29,7 @@
           <button refID="SewerSelect_MakeManholes" size="large" />
           <button refID="SewerSelect_MakeSewerLines" size="large" />
           <tool refID="esri_mapping_clearSelectionButton" size="small" />
+          <buttonPalette refID="SewerSelect_MakeLayersButtonPalette" />
         </group>
       </groups>
       <controls>
@@ -45,7 +46,23 @@
         <button id="SewerSelect_MakeSewers" caption="Manholes and Lines Layers From Selection" className="MakeSewers" loadOnClick="true" smallImage="Images\T-Rex16.png" largeImage="Images\T-Rex32.png">
           <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
         </button>
+        <button id="SewerSelect_MakeLayersButtonPalette_Items_SewersButton" caption="Manholes and Lines Selection" className="MakeLayersButtonPalette_sewersbutton" loadOnClick="true" smallImage="Images\GenericButtonGrey16.png" largeImage="Images\GenericButtonGrey32.png">
+          <tooltip heading="Palette Button 1">ToolTip<disabledText /></tooltip>
+        </button>
+        <button id="SewerSelect_MakeLayersButtonPalette_Items_ManholesButton" caption="Manhole Selection" className="MakeLayersButtonPalette_manholesbutton" loadOnClick="true" smallImage="Images\GenericButtonGrey16.png" largeImage="Images\GenericButtonGrey32.png">
+          <tooltip heading="Palette Button 2">ToolTip<disabledText /></tooltip>
+        </button>
+        <button id="SewerSelect_MakeLayersButtonPalette_Items_LinesButton" caption="Sewer Lines Selection" className="MakeLayersButtonPalette_linesbutton" loadOnClick="true" smallImage="Images\GenericButtonGrey16.png" largeImage="Images\GenericButtonGrey32.png">
+          <tooltip heading="Palette Button 3">ToolTip<disabledText /></tooltip>
+        </button>
       </controls>
+      <palettes>
+        <buttonPalette id="SewerSelect_MakeLayersButtonPalette" caption="Make Layers from Selections" dropDown="false" menuStyle="true">
+          <button refID="SewerSelect_MakeLayersButtonPalette_Items_SewersButton" />
+          <button refID="SewerSelect_MakeLayersButtonPalette_Items_ManholesButton" />
+          <button refID="SewerSelect_MakeLayersButtonPalette_Items_LinesButton" />
+        </buttonPalette>
+      </palettes>
     </insertModule>
   </modules>
 </ArcGIS>

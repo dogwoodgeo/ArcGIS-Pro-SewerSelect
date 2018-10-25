@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Daml.cs" />
+    <Compile Include="MakeLayersButtonPalette.cs" />
     <Compile Include="MakeManholes.cs" />
     <Compile Include="MakeSewerLines.cs" />
     <Compile Include="MakeSewers.cs" />
@@ -154,6 +155,18 @@
   </ItemGroup>
   <ItemGroup>
     <AddInContent Include="DarkImages\GenericButtonBlue32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\GenericButtonGrey16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\GenericButtonGrey32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="DarkImages\GenericButtonGrey16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="DarkImages\GenericButtonGrey32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!--
