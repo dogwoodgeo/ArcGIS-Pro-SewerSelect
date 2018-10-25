@@ -25,53 +25,27 @@
           <!-- host controls within groups -->
           <tool refID="SewerSelect_SewerSelectTool" size="large" />
           <tool refID="esri_mapping_createSelectionLayerButton" size="large" />
-          <splitButton refID="SewerSelect_MakeLayersButtons" />
+          <button refID="SewerSelect_MakeSewers" size="large" />
+          <button refID="SewerSelect_MakeManholes" size="large" />
+          <button refID="SewerSelect_MakeSewerLines" size="large" />
           <tool refID="esri_mapping_clearSelectionButton" size="small" />
-         </group>
+        </group>
       </groups>
       <controls>
         <!-- add your controls here -->
-        <tool id="SewerSelect_SewerSelectTool" 
-              caption="Select" 
-              className="SewerSelectTool" 
-              loadOnClick="true" 
-              smallImage="Images\Rabbit16.png" 
-              largeImage="Images\Rabbit32.png" 
-          condition="esri_mapping_mapPane">
+        <tool id="SewerSelect_SewerSelectTool" caption="Select" className="SewerSelectTool" loadOnClick="true" smallImage="Images\Rabbit16.png" largeImage="Images\Rabbit32.png" condition="esri_mapping_mapPane">
           <tooltip heading="Select Sewers">This tool will make Manhole and Sewer Line layers the only selctable layers. Then use a Lasso tool to draw area you want to select sewers from. MANHOLES and SEWER LINES layers must be in the map and named as such.<disabledText /></tooltip>
         </tool>
-        <button id="SewerSelect_MakeLayersButtons_Items_ManholesLines_button" 
-                caption="Make Sewers Layers" 
-                className="MakeLayersButtons_ManholesLines_button" 
-                loadOnClick="true" 
-                smallImage="Images\T-Rex16.png" 
-                largeImage="Images\T-Rex32.png">
-          <tooltip heading="Split Button 1">ToolTip<disabledText /></tooltip>
+        <button id="SewerSelect_MakeSewerLines" caption="Sewer Lines Layer From Selection" className="MakeSewerLines" loadOnClick="true" smallImage="Images\MarsCat16.png" largeImage="Images\MarsCat32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
         </button>
-        <button id="SewerSelect_MakeLayersButtons_Items_Manholes_button" 
-                caption="Make Manholes Layer" 
-                className="MakeLayersButtons_Manholes_button" 
-                loadOnClick="true" 
-                smallImage="Images\MarsCat16.png" 
-                largeImage="Images\MarsCat32.png">
-          <tooltip heading="Split Button 2">ToolTip<disabledText /></tooltip>
+        <button id="SewerSelect_MakeManholes" caption="Manholes Layer From Selection" className="MakeManholes" loadOnClick="true" smallImage="Images\BexDog16.png" largeImage="Images\BexDog32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
         </button>
-        <button id="SewerSelect_MakeLayersButtons_Items_SewerLines_button" 
-                caption="Make Sewer Lines Layer " 
-                className="MakeLayersButtons_SewerLines_button" 
-                loadOnClick="true" 
-                smallImage="Images\BexDog16.png" 
-                largeImage="Images\BexDog32.png">
-          <tooltip heading="Split Button 3">ToolTip<disabledText /></tooltip>
+        <button id="SewerSelect_MakeSewers" caption="Manholes and Lines Layers From Selection" className="MakeSewers" loadOnClick="true" smallImage="Images\T-Rex16.png" largeImage="Images\T-Rex32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
         </button>
       </controls>
-      <splitButtons>
-        <splitButton id="SewerSelect_MakeLayersButtons">
-          <button refID="SewerSelect_MakeLayersButtons_Items_ManholesLines_button" />
-          <button refID="SewerSelect_MakeLayersButtons_Items_Manholes_button" />
-          <button refID="SewerSelect_MakeLayersButtons_Items_SewerLines_button" />
-        </splitButton>
-      </splitButtons>
     </insertModule>
   </modules>
 </ArcGIS>

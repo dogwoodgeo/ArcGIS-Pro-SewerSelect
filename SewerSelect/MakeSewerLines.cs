@@ -34,16 +34,16 @@ namespace SewerSelect
                 {
                     var lines = mapView.GetLayersAsFlattenedList().OfType<FeatureLayer>().FirstOrDefault(s => s.Name == "Sewer Lines");
                     //Get the selected features from the map.
-                    var oidList = lines.GetSelection().GetObjectIDs();
-                    var oid = lines.GetTable().GetDefinition().GetObjectIDField();
-                    if (oidList.Count() == 0)
+                    var linesOIDList = lines.GetSelection().GetObjectIDs();
+                    var linesOID = lines.GetTable().GetDefinition().GetObjectIDField();
+                    if (linesOIDList.Count() == 0)
                     {
-                       MessageBox.Show("There are no sewer lines selected.");
+                       MessageBox.Show("There are no sewer lines selected.", "Warning");
                     }
 
                     else
                     {
-                        string defQuery = $"{oid} in ({string.Join(",", oidList)})";
+                        string defQuery = $"{linesOID} in ({string.Join(",", linesOIDList)})";
                         string url = @"O:\SHARE\405 - INFORMATION SERVICES\GIS_Layers\GISVIEWER.SDE@SQL0.sde\SDE.SEWERMAN.SEWERS_VIEW";
                         
                         Uri uri = new Uri(url);
@@ -69,7 +69,7 @@ namespace SewerSelect
                 {
                     MessageBox.Show("There is no layer named 'Sewer Lines' in map. " +
                         "\n\nIf a sewer lines layer is present, make sure the layer is named 'Sewer Lines'. " +
-                        "This tool will not work unless the layer is spelled exactly like above.");
+                        "This tool will not work unless the layer is spelled exactly like above.", "Warning");
                 }
 
             });

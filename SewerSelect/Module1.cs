@@ -33,12 +33,32 @@ namespace SewerSelect
                 return _this ?? (_this = (Module1)FrameworkApplication.FindModule("SewerSelect_Module"));
             }
         }
+        //public Task MakeLinesLayerAsync()
+        //{
+        //    return QueuedTask.Run(() =>
+        //    {
+        //        //Get the active map view.
+        //        var mapView = MapView.Active.Map;
+        //        if (mapView == null)
+        //            return;
 
+        //        var sewerLayer = mapView.GetLayersAsFlattenedList().OfType<FeatureLayer>().FirstOrDefault(s => s.Name == "Sewer Lines");
+        //        var selectedFeatures = sewerLayer.GetSelection();
+        //        var count = selectedFeatures.GetCount();
+
+        //        string caption = "GetSelection()";
+        //        string message = $"Sewers Selected: {count}";
+
+        //        MessageBox.Show(message, caption);
+
+
+        //    });
+        //}
         #region Overrides
-        /// <summary>
-        /// Called by Framework when ArcGIS Pro is closing
-        /// </summary>
-        /// <returns>False to prevent Pro from closing, otherwise True</returns>
+            /// <summary>
+            /// Called by Framework when ArcGIS Pro is closing
+            /// </summary>
+            /// <returns>False to prevent Pro from closing, otherwise True</returns>
         protected override bool CanUnload()
         {
             //TODO - add your business logic
