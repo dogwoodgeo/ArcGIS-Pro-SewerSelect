@@ -4,14 +4,21 @@
     <Description>SewerSelect description</Description>
     <Image>Images\AddinDesktop32.png</Image>
     <Author>Bradley.Jones</Author>
-    <Company>Acme</Company>
+    <Company>Little Rock Water Reclamation Authority</Company>
     <Date>10/3/2018 8:35:55 AM, 2018</Date>
     <Subject>Framework</Subject>
     <!-- Note subject can be one or more of these topics:
                     Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
   </AddInInfo>
+  <!-- ****I never could get the conditions to work****
+  <conditions>
+    <insertCondition id="manholes_state_condidtion" caption="Manholes State">
+      <state id="manholes_state"/>
+    </insertCondition>  
+  </conditions>-->
+  
   <modules>
-    <insertModule id="SewerSelect_Module" className="Module1" autoLoad="false" caption="Module1">
+    <insertModule id="SewerSelect_Module" className="Module1" autoLoad="true" caption="Module1">
       <!-- uncomment to have the control hosted on a separate tab-->
       <tabs>
         <!--<tab id="SewerSelect_Tab1" caption="New Tab">
@@ -30,16 +37,38 @@
       </groups>
       <controls>
         <!-- add your controls here -->
-        <tool id="SewerSelect_SewerSelectTool" caption="Select" className="SewerSelectTool" loadOnClick="true" smallImage="Images\Rabbit16.png" largeImage="Images\Rabbit32.png" condition="esri_mapping_mapPane">
+        <tool id="SewerSelect_SewerSelectTool" 
+              caption="Select" 
+              className="SewerSelectTool" 
+              loadOnClick="true" 
+              smallImage="Images\Rabbit16.png" 
+              largeImage="Images\Rabbit32.png" 
+              condition="esri_mapping_mapPane">
           <tooltip heading="Select Sewers">This tool will make Manhole and Sewer Line layers the only selctable layers. Then use a Lasso tool to draw area you want to select sewers from. MANHOLES and SEWER LINES layers must be in the map and named as such.<disabledText /></tooltip>
         </tool>
-        <button id="SewerSelect_MakeLayersButtonPalette_Items_SewersButton" caption="Manholes and Lines Selection Layer" className="MakeLayersButtonPalette_sewersbutton" loadOnClick="true" smallImage="Images\GenericButtonGrey16.png" largeImage="Images\GenericButtonGrey32.png">
+        <button id="SewerSelect_MakeLayersButtonPalette_Items_SewersButton" 
+                caption="Manholes and Lines Selection Layer" 
+                className="MakeLayersButtonPalette_sewersbutton" 
+                loadOnClick="true" 
+                smallImage="Images\GenericButtonGrey16.png" 
+                largeImage="Images\GenericButtonGrey32.png">
           <tooltip heading="Palette Button 1">ToolTip<disabledText /></tooltip>
         </button>
-        <button id="SewerSelect_MakeLayersButtonPalette_Items_ManholesButton" caption="Manholes Selection Layer" className="MakeLayersButtonPalette_manholesbutton" loadOnClick="true" smallImage="Images\GenericButtonGrey16.png" largeImage="Images\GenericButtonGrey32.png">
+        <button id="SewerSelect_MakeLayersButtonPalette_Items_ManholesButton" 
+                className="MakeLayersButtonPalette_manholesbutton"
+                caption="Manholes Selection Layer"
+                condition="manholes_state_condition"
+                loadOnClick="true" 
+                smallImage="Images\GenericButtonGrey16.png" 
+                largeImage="Images\GenericButtonGrey32.png">
           <tooltip heading="Palette Button 2">ToolTip<disabledText /></tooltip>
         </button>
-        <button id="SewerSelect_MakeLayersButtonPalette_Items_LinesButton" caption="Sewer Lines Selection Layer" className="MakeLayersButtonPalette_linesbutton" loadOnClick="true" smallImage="Images\GenericButtonGrey16.png" largeImage="Images\GenericButtonGrey32.png">
+        <button id="SewerSelect_MakeLayersButtonPalette_Items_LinesButton" 
+                caption="Sewer Lines Selection Layer" 
+                className="MakeLayersButtonPalette_linesbutton" 
+                loadOnClick="true" 
+                smallImage="Images\GenericButtonGrey16.png" 
+                largeImage="Images\GenericButtonGrey32.png">
           <tooltip heading="Palette Button 3">ToolTip<disabledText /></tooltip>
         </button>
       </controls>
