@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Daml.cs" />
+    <Compile Include="DeSelectTool.cs" />
     <Compile Include="MakeLayersButtonPalette.cs" />
     <Compile Include="SewerSelectTool.cs" />
     <Compile Include="Module1.cs" />
@@ -164,6 +165,9 @@
   </ItemGroup>
   <ItemGroup>
     <AddInContent Include="DarkImages\GenericButtonGrey32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\SelectSewers.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!--

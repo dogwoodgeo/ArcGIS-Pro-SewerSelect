@@ -70,7 +70,7 @@ namespace SewerSelect
 
                 catch (Exception)
                 {
-                    string caption = "Failed to add data";
+                    string caption = "Failed to Select Features";
                     string message = "Process failed.\n\nSave and restart ArcGIS Pro and try process again.\n\n" +
                         "If problem persist, contact your local GIS nerd.";
 
@@ -93,7 +93,7 @@ namespace SewerSelect
 
                 catch (Exception)
                 {
-                    string caption = "Failed to get street view";
+                    string caption = "Failed to select features!";
                     string message = "Process failed. \n\nSave and restart ArcGIS Pro and try process again.\n\n" +
                         "If problem persist, contact your local GIS nerd.";
 
