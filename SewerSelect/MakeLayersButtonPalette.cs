@@ -18,6 +18,7 @@ namespace SewerSelect
             {
                 try
                 {
+                    // Check for "Manholes" and "Sewer Lines" layers in map.
                     var mapView = MapView.Active.Map;
                     var mhExists = mapView.GetLayersAsFlattenedList().OfType<FeatureLayer>().Any(m => m.Name == "Manholes");
                     var sewerExists = mapView.GetLayersAsFlattenedList().OfType<FeatureLayer>().Any(s => s.Name == "Sewer Lines");
@@ -62,7 +63,7 @@ namespace SewerSelect
             {
                 try
                 {
-                    //Get the active map view.
+                    // Check for "Manholes" layer in map.
                     var mapView = MapView.Active.Map;
 
                     var linesExists = mapView.GetLayersAsFlattenedList().OfType<FeatureLayer>().Any(s => s.Name == "Manholes");
@@ -101,7 +102,7 @@ namespace SewerSelect
             {
                 try
                 {
-                    //Get the active map view.
+                    // Check for "Sewer Lines" layer in map.
                     var mapView = MapView.Active.Map;
 
                     var linesExists = mapView.GetLayersAsFlattenedList().OfType<FeatureLayer>().Any(s => s.Name == "Sewer Lines");
