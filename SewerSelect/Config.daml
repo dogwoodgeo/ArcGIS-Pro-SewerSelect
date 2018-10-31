@@ -52,7 +52,7 @@ MANHOLES and SEWER LINES layers must be in the map and named as such for tool to
               loadOnClick="true"
               smallImage="Images\GenericButtonRed16.png"
               largeImage="Images\Deselect.png"
-              condition="esri_mapping_mapPane">
+              condition="esri_mapping_activeMapView_hasFeatureSelectionCondition">
           <tooltip heading="De-Select Sewer Features">
 Use this tool to de-select any features that are currently selected based on a click-point. Click on the features you wish to remove from the selection. 
 
@@ -62,7 +62,8 @@ Manholes and/or Sewer Lines layers must have selected features for this tool to 
         </tool>
         <button id="SewerSelect_MakeLayersButtonPalette_Items_SewersButton" 
                 caption="Manholes and Lines Selection Layer" 
-                className="MakeLayersButtonPalette_sewersbutton" 
+                className="MakeLayersButtonPalette_sewersbutton"
+                condition="esri_mapping_activeMapView_hasFeatureSelectionCondition"
                 loadOnClick="true" 
                 smallImage="Images\MakeSewerLayer16.png" 
                 largeImage="Images\MakeSewerLayer.png">
@@ -75,8 +76,8 @@ Manholes and Sewer Lines layers MUST be present in map and named as such, as wel
         </button>
         <button id="SewerSelect_MakeLayersButtonPalette_Items_ManholesButton" 
                 className="MakeLayersButtonPalette_manholesbutton" 
-                caption="Manholes Selection Layer" 
-                condition="manholes_state_condition" 
+                caption="Manholes Selection Layer"
+                condition="esri_mapping_activeMapView_hasFeatureSelectionCondition" 
                 loadOnClick="true" 
                 smallImage="Images\MakeManholesLayer16.png" 
                 largeImage="Images\MakeManholesLayer.png">
@@ -89,7 +90,8 @@ Manholes layer MUST be present in map and named as such, as well as, have select
         </button>
         <button id="SewerSelect_MakeLayersButtonPalette_Items_LinesButton" 
                 caption="Sewer Lines Selection Layer" 
-                className="MakeLayersButtonPalette_linesbutton" 
+                className="MakeLayersButtonPalette_linesbutton"
+                condition="esri_mapping_activeMapView_hasFeatureSelectionCondition"
                 loadOnClick="true" 
                 smallImage="Images\MakeLinesLayer16.png" 
                 largeImage="Images\MakeLinesLayer.png">
