@@ -169,6 +169,27 @@
   <ItemGroup>
     <AddInContent Include="Images\SelectSewers.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\DeSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\MakeSewerLayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\MakeManholesLayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\MakeManholesLayer16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\MakeSewerLayer16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\MakeLinesLayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\MakeLinesLayer16.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!--
   PackageAction can be:
