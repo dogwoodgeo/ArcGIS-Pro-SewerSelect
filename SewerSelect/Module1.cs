@@ -99,9 +99,7 @@ namespace SewerSelect
 
         }
         
-
-
-        // Methods to create the selection layer.  
+        // Methods to create the selection layers.  
         public static void MakeSewersLayers(Map mapView)
         {
             try
